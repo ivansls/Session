@@ -1,0 +1,58 @@
+﻿<Page x:Class="UP02.DirectorInstruments"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UP02"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DirectorInstruments">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.4*"/>
+        </Grid.ColumnDefinitions>
+        
+        <DataGrid x:Name="InsGrid" SelectionChanged="InsGrid_SelectionChanged" />
+
+        <Grid Grid.Column="1" Margin="15,0,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Информация об инструментах" HorizontalAlignment="Center"/>
+            <TextBox Grid.Row="1" x:Name="Naim"/>
+            <TextBox Grid.Row="2" x:Name="Desc"/>
+            <TextBox Grid.Row="3" x:Name="Type"/>
+            <TextBox Grid.Row="4" x:Name="Iznos"/>
+            <TextBox Grid.Row="5" x:Name="Post"/>
+            <TextBox Grid.Row="6" x:Name="Date"/>
+            <TextBox Grid.Row="7" x:Name="Count"/>
+            <Grid Grid.Row="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Content="Добавить" Click="Button_Click"/>
+                <Button Content="Обновить" Grid.Column="1" Click="Button_Click_1"/>
+                
+            </Grid>
+            <Button Content="Удалить" Grid.Row="9" Click="Button_Click_2"/>
+
+        </Grid>
+        
+        <!--<Button Grid.Row="1" Content="Создать"/>-->
+    </Grid>
+</Page>
